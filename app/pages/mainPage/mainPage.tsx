@@ -18,8 +18,6 @@ export default function MainPage() {
           muted
           loop
           playsInline
-          preload="auto" // Força o carregamento em segundo plano
-          poster={fallbackImage.src} // IMAGEM ESTÁTICA enquanto o vídeo não carrega
         >
           {" "}
           <source
