@@ -1,6 +1,7 @@
 "use client";
-import Image from "next/image";
+
 import logotipo from "../../../public/images/logos/logotipoVersaoS.png";
+import fallbackImage from "../../../public/images/fallback-image.png"
 import * as S from "./mainPageStyled";
 import { useInView } from "motion/react";
 import { useRef } from "react";
@@ -18,7 +19,7 @@ export default function MainPage() {
           loop
           playsInline
           preload="auto" // Força o carregamento em segundo plano
-          poster="/images/fallback-image.jpg" // IMAGEM ESTÁTICA enquanto o vídeo não carrega
+          poster={fallbackImage.src} // IMAGEM ESTÁTICA enquanto o vídeo não carrega
         >
           {" "}
           <source
