@@ -1,9 +1,11 @@
+import { motion } from "motion/react";
 import styled from "styled-components";
+import Image from "next/image";
 
 export const MainContainer = styled.div`
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  max-height: 100vh;
   overflow: hidden;
 `;
 
@@ -13,6 +15,7 @@ export const VideoContainer = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
+  opacity: 0.6; // Ajusta a opacidade do vídeo para destacar o conteúdo
   z-index: -1; // Garante que o vídeo fique atrás de tudo
 
   video {
@@ -22,7 +25,9 @@ export const VideoContainer = styled.div`
 
     /* OPÇÃO A: Inverter horizontalmente (Espelhar) */
     transform: scaleX(-1);
-
+    @media (max-width: 768px) {
+    transform: scaleX(1);
+    }
     /* OPÇÃO B: Inverter cores (Negativo) */
     /* filter: invert(100%); */
   }
@@ -42,11 +47,28 @@ export const Overlay = styled.div`
   ); // Escurece um pouco o vídeo para o texto aparecer
 `;
 
-export const LogoContent = styled.div`
-  margin-bottom: 1rem;
+export const StyledLogo = styled(Image)`
+  height: 3rem; // Tamanho padrão (Desktop)
+  width: auto;
+  object-fit: contain;
+
+  @media (max-width: 768px) {
+    height: 1.6rem; // Tamanho reduzido para Mobile
+  }
 `;
 
-export const TextContent = styled.h3`
+export const LogoContent = styled(motion.div)`
+  margin-bottom: 1rem;
+
+  @media (max-width: 768px) {
+    margin-top: 3vh;
+    margin-bottom: 13vh;
+  }
+`;
+
+export const TitleContent = styled(motion.h1)``;
+
+export const TextContent = styled(motion.p)`
   margin-top: 1rem;
 `;
 
@@ -61,13 +83,22 @@ export const Content = styled.div`
 
   margin-top: 14vh;
   margin-left: 5vw;
+
+  @media (max-width: 768px) {
+    margin-top: 0;
+    padding-right: 10%;
+  }
 `;
 
-export const ButtonContentDiv = styled.div`
+export const ButtonContentDiv = styled(motion.div)`
   margin-top: 3rem;
   margin-bottom: 1rem;
   flex-direction: row;
   display: flex;
+
+  @media (max-width: 768px) {
+    margin-top: 1rem;
+  }
 `;
 
 export const ButtonContent = styled.button`
@@ -80,9 +111,13 @@ export const ButtonContent = styled.button`
   border: none;
   padding: 0.3rem 2rem;
   cursor: pointer;
-  margin-right: 2rem;
 
   transition: all 0.1s ease-in-out;
+
+  @media (max-width: 768px) {
+    padding: 0.3rem 1.5rem;
+    font-size: 12px !important;
+  }
 
   &:hover {
     background-color: #680001;
