@@ -12,13 +12,21 @@ export default function MainPage() {
   return (
     <S.MainContainer>
       <S.VideoContainer>
-        <video autoPlay muted loop playsInline>
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto" // Força o carregamento em segundo plano
+          poster="/images/fallback-image.jpg" // IMAGEM ESTÁTICA enquanto o vídeo não carrega
+        >
+          {" "}
           <source
-            src="/videos/telaInicialMob.mp4"
+            src="https://n8mld2313ljofqtt.public.blob.vercel-storage.com/telaInicialMob.mp4"
             type="video/mp4"
             media="(max-width: 768px)"
           />
-          <source src="/videos/telaInicial.mp4" type="video/mp4" />
+          <source src="https://n8mld2313ljofqtt.public.blob.vercel-storage.com/telaInicial.mp4" type="video/mp4" />
           Seu navegador não suporta vídeos.
         </video>
         <S.Overlay />
