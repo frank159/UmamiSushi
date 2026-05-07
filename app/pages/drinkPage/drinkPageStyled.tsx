@@ -83,10 +83,10 @@ export const Img2 = styled(Image)`
 `;
 
 export const Title = styled(motion.h1)`
+  padding-bottom: 2rem;
   @media (max-width: 768px) {
     padding-left: 2rem;
     padding-right: 2rem;
-    padding-bottom: 2rem;
     width: 80%;
   }
 `;
@@ -158,7 +158,7 @@ export const TextContainer = styled.div`
 
 export const LogoContainer = styled(motion.div)`
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
   align-items: flex-start;
 
   @media (max-width: 768px) {

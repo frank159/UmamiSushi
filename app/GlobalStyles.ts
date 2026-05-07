@@ -9,19 +9,21 @@ export const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
   }
 
-  body {
+body {
     font-family: var(--font-mohave), sans-serif;
-    font-weight: 400; /* Mohave Regular como padrão */
-    font-size: 16px !important; /* 16px */
+    font-weight: 300; /* 👈 Mude de 400 para 300 */
+    font-size: 16px !important;
     background-color: #000000;
     color: #ffff;
-    -webkit-font-smoothing: antialiased;
-  }
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+    text-rendering: optimizeSpeed !important;
+}
 
 h1 {
     font-family: var(--font-aboreto), serif !important;
     font-size: 48px !important;
-    font-weight: 400;
+    font-weight: 300;
     
     @media (max-width: 768px) {
       font-size: 24px !important;
@@ -30,7 +32,7 @@ h1 {
 
   h2 {
     font-family: var(--font-mohave), sans-serif !important;
-    font-weight: 200;
+    font-weight: 300;
     line-height: 1.5;
     font-size: 32px !important;
 
@@ -42,13 +44,13 @@ h1 {
   h3 {
     font-family: var(--font-mohave), sans-serif !important;
     font-size: 1rem;
-    font-weight: 200;
+    font-weight: 300;
     line-height: 1.5;
   }
   p {
     font-family: var(--font-mohave), sans-serif !important;
     font-size: 1rem;
-    font-weight: 200;
+    font-weight: 100;
     line-height: 1.5;
   }
 
@@ -58,6 +60,6 @@ h1 {
   }
 
   .text-extrabold {
-    font-weight: 900; /* Mohave ExtraBold */
+    font-weight: 300; /* Mohave ExtraBold */
   }
 `;

@@ -58,7 +58,7 @@ export const ServiceContainer = styled(motion.div)`
   @media (max-width: 768px) {
     display: block; // Swiper funciona melhor com block no mobile
     width: 100%;
-
+    padding: 0 10px;
     // Isso centraliza o ServiceCard dentro do SwiperSlide
     .swiper-slide {
       display: flex;

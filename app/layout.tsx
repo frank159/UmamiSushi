@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import { Aboreto, Mohave } from "next/font/google";
 import { GlobalStyles } from "@/app/GlobalStyles";
+import StyledComponentsRegistry from "@/lib/registry";
 
 const aboreto = Aboreto({
   weight: "400",
@@ -12,7 +13,7 @@ const aboreto = Aboreto({
 
 const mohave = Mohave({
   // Importante: adicione os pesos que você usa no GlobalStyles (400, 700, 900)
-  weight: ["300"], 
+  weight: ["300"],
   subsets: ["latin"],
   variable: "--font-mohave", // Isso cria a variável CSS
 });
@@ -30,17 +31,15 @@ export default function RootLayout({
   }, []);
 
   return (
-    /* 
-       MUDANÇA AQUI: Trocamos .className por .variable 
-       Isso "ativa" as variáveis --font-aboreto e --font-mohave no documento
-    */
     <html
       lang="pt-br"
       className={`${aboreto.variable} ${mohave.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <GlobalStyles />
-        {children}
+        <StyledComponentsRegistry>
+          <GlobalStyles />
+          {children}
+        </StyledComponentsRegistry>
       </body>
     </html>
   );

@@ -52,10 +52,11 @@ export default function ServicePage() {
               modules={[Pagination]}
               pagination={{ clickable: true }}
               slidesPerView={1}
+              spaceBetween={20} // 👈 Adicione isso aqui (valor em px)
               centeredSlides={isMobile}
               loop={false}
               className="testimonialSwiper"
-              style={{ width: "100%", paddingBottom: "40px" }} // 👈 ESSENCIAL
+              style={{ width: "100%", paddingBottom: "40px" }}
             >
               <SwiperSlide>
                 <S.ServiceCard bg={almoco.src}>
