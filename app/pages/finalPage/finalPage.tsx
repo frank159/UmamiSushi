@@ -62,7 +62,7 @@ export default function FinalPage() {
 
         <S.MobileVideoSection>
           <S.VideoBackground autoPlay muted loop playsInline>
-            <source src="/videos/telaInicial.mp4" type="video/mp4" />
+            <source src="https://n8mld2313ljofqtt.public.blob.vercel-storage.com/telaInicial.mp4" type="video/mp4" />
           </S.VideoBackground>
 
           <S.AddressOverlay>
