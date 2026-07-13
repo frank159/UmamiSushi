@@ -28,11 +28,13 @@ export default function Footer() {
 
         <S.SocialWrapper>
           <S.SocialLink>
-            <Image src={whatsappIcon} alt="WhatsApp" width={20} height={20} />
+            <Image src={whatsappIcon} alt="WhatsApp" width={20} height={20} style={{ filter: "invert(1)" }}
+            />
           </S.SocialLink>
 
           <S.SocialLink>
-            <Image src={instagramIcon} alt="Instagram" width={20} height={20} />
+            <Image src={instagramIcon} alt="Instagram" width={20} height={20} style={{ filter: "invert(1)" }}
+            />
           </S.SocialLink>
         </S.SocialWrapper>
       </S.FooterContent>
