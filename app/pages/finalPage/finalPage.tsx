@@ -1,10 +1,9 @@
 "use client";
 import Image from "next/image";
-import * as S from "./finalPageStyled"; // Verifique o caminho do seu import
+import * as S from "./finalPageStyled";
 import { useInView } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 
-// Imagens (Assumindo que finalPage é o background e finalPage2 é o sushi em destaque)
 import finalPage from "../../../public/images/finalPage.png";
 import finalPage2 from "../../../public/images/finalPage2.png";
 
@@ -54,7 +53,6 @@ export default function FinalPage() {
             <S.ButtonContent>Fazer reserva</S.ButtonContent>
           </S.ButtonGroup>
 
-          {/* Este endereço some no mobile */}
           <S.AddressInfo>
             ENDEREÇO: RUA DAS PALMEIRAS, 112 • BATEL • CURITIBA - PR
           </S.AddressInfo>

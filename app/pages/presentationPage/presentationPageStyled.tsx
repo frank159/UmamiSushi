@@ -39,7 +39,6 @@ export const ContentContainer = styled.div`
     gap: 0rem;
   }
 
-  /* Nova configuração para Mobile */
   @media (max-width: 768px) {
     height: 40vh;
     justify-content: center;
@@ -59,7 +58,6 @@ export const ImgContainer = styled(motion.div)`
     width: 100%;
     height: 100%;
     z-index: 1;
-    /* Camada escura para dar leitura ao texto */
     &::after {
       content: "";
       position: absolute;
@@ -109,7 +107,6 @@ export const TextContainer = styled(motion.div)`
 `;
 
 export const Title = styled.h1`
-  /* Suas configs de fonte aqui */
   @media (max-width: 768px) {
     font-size: 1.8rem;
     margin-bottom: 1rem;

@@ -4,7 +4,6 @@ import React from "react";
 import Image from "next/image";
 import * as S from "./footerStyled";
 
-// Se estiver usando os arquivos na pasta public:
 import whatsappIcon from "../../../public/images/logos/whats.png";
 import instagramIcon from "../../../public/images/logos/insta.png";
 import logotipoRodape from "../../../public/images/logos/logotipoRodape.png";
@@ -18,17 +17,15 @@ export default function Footer() {
             src={logotipoRodape}
             alt="logotipoRodape"
             width={60}
-            height={60} // Adicione o height para evitar erros de tipagem, o CSS cuidará do resto
+            height={60}
             priority
           />
         </S.LogoWrapper>
 
-        {/* Centro: Copyright */}
         <S.CopyrightText>
           © 2026 Umami Sushi. Todos os direitos reservados.
         </S.CopyrightText>
 
-        {/* Lado Direito: Redes Sociais com Imagens */}
         <S.SocialWrapper>
           <S.SocialLink>
             <Image src={whatsappIcon} alt="WhatsApp" width={20} height={20} />

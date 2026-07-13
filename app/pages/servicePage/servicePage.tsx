@@ -52,7 +52,7 @@ export default function ServicePage() {
               modules={[Pagination]}
               pagination={{ clickable: true }}
               slidesPerView={1}
-              spaceBetween={20} // 👈 Adicione isso aqui (valor em px)
+              spaceBetween={20}
               centeredSlides={isMobile}
               loop={false}
               className="testimonialSwiper"

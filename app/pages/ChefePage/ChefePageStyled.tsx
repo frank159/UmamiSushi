@@ -12,14 +12,7 @@ export const MainContainer = styled.div`
   justify-content: center;
   align-items: center;
   background-color: #000;
-  /* @media (max-width: 768px) {
-    height: 40vh;
-    min-height: auto;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    text-align: center;
-  } */
+  
 `;
 
 export const ImgContainer = styled(motion.div)`
@@ -28,7 +21,7 @@ export const ImgContainer = styled(motion.div)`
   @media (max-width: 1240px) {
     width: 50%;
     height: 50vh;
-    overflow: hidden; // ESSENCIAL pra cortar corretamente
+    overflow: hidden; 
   }
 
   @media (max-width: 768px) {

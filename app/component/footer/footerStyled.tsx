@@ -4,7 +4,7 @@ export const FooterContainer = styled.footer`
   width: 100%;
   background-color: #480001;
   color: #ffffff;
-  padding: 1rem 6rem; /* Padding reduzido para manter o aspecto "slim" */
+  padding: 1rem 6rem; 
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   @media (max-width: 768px) {
     padding: 1.5rem 1rem;
@@ -27,13 +27,12 @@ export const LogoWrapper = styled.div`
   display: flex;
   align-items: center;
 
-  /* Estilizando a imagem dentro do wrapper */
   img {
-    width: 60px; /* Largura padrão (Desktop) */
-    height: auto; /* Mantém a proporção */
+    width: 60px; 
+    height: auto;
 
     @media (max-width: 768px) {
-      width: 40px; /* Largura solicitada para Mobile */
+      width: 40px; 
     }
   }
 `;
@@ -56,13 +55,12 @@ export const SocialWrapper = styled.div`
 
 export const SocialLink = styled.span`
   transition: transform 0.2s ease;
-  display: block; /* Garante que o link envolva a imagem corretamente */
+  display: block; 
 
   &:hover {
     transform: scale(1.1);
   }
 
-  /* Ajuste caso você queira forçar um tamanho via CSS */
   img {
     display: block;
   }

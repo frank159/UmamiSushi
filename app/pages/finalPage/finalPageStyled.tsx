@@ -16,7 +16,6 @@ export const MainContainer = styled.section`
   }
 `;
 
-// Transformado em motion.div para podermos animar
 export const ContentContainer = styled(motion.div)`
   width: 80%;
   display: grid;
@@ -68,7 +67,6 @@ export const RightPanel = styled.div`
     object-fit: cover;
   }
 
-  /* Esconde completamente o painel da imagem da direita em 1240px */
   @media (max-width: 1240px) {
     display: none;
   }
@@ -95,7 +93,6 @@ export const BackgroundImageWrapper = styled.div`
     opacity: 0.4;
   }
 
-  /* Remove a imagem de fundo no mobile */
   @media (max-width: 768px) {
     display: none;
   }
@@ -181,13 +178,13 @@ export const AddressInfo = styled.p`
 `;
 
 export const MobileVideoSection = styled.div`
-  display: none; /* Escondido por padrão */
+  display: none;
 
   @media (max-width: 768px) {
     display: flex;
     position: relative;
     width: 100%;
-    height: 200px; /* Altura da seção do vídeo */
+    height: 200px;
     justify-content: center;
     align-items: center;
     overflow: hidden;
@@ -203,7 +200,7 @@ export const VideoBackground = styled.video`
   z-index: 0;
   filter: brightness(
     0.6
-  ); /* Escurece um pouco o vídeo para o texto ler melhor */
+  );
 `;
 
 export const AddressOverlay = styled.div`

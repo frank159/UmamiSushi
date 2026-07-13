@@ -15,21 +15,17 @@ export const VideoContainer = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.6; // Ajusta a opacidade do vídeo para destacar o conteúdo
-  z-index: -1; // Garante que o vídeo fique atrás de tudo
-
+  opacity: 0.6; 
+  z-index: -1;
   video {
     width: 100%;
     height: 100%;
-    object-fit: cover; // O vídeo preenche a tela sem esticar
+    object-fit: cover; 
 
-    /* OPÇÃO A: Inverter horizontalmente (Espelhar) */
     transform: scaleX(-1);
     @media (max-width: 768px) {
     transform: scaleX(1);
     }
-    /* OPÇÃO B: Inverter cores (Negativo) */
-    /* filter: invert(100%); */
   }
 `;
 
