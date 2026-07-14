@@ -21,16 +21,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       const video = vercelSource?.parentElement as HTMLVideoElement;
 
       if (video) {
-        // MUDANÇA CRÍTICA: readyState 4 significa que há dados suficientes para rodar sem travar
         if (video.readyState >= 4) {
           setIsLoading(false);
         } else {
-          // 'canplaythrough' é o evento que garante que o vídeo vai tocar do início ao fim
           video.addEventListener("canplaythrough", () => setIsLoading(false));
           
-          // Fallback se o navegador estiver "na dúvida" sobre o buffer
           video.addEventListener("canplay", () => {
-             // Se já tem o básico e passou 1s, liberamos para não frustrar o usuário
              setTimeout(() => setIsLoading(false), 1000);
           });
 
@@ -47,7 +43,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
     observer.observe(document.body, { childList: true, subtree: true });
     
-    // Aumentamos o fallback para 6s, já que o canplaythrough exige mais download
     const timeout = setTimeout(() => setIsLoading(false), 6000);
 
     return () => {
@@ -75,7 +70,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                       key={index}
                       initial={{ width: 0, height: 0, opacity: 0.5 }}
                       animate={{
-                        width: ["0px", "140px"], // Aumentei um pouco o ripple
+                        width: ["0px", "140px"],
                         height: ["0px", "140px"],
                         opacity: [0.5, 0],
                       }}
@@ -92,7 +87,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             )}
           </AnimatePresence>
 
-          {/* Mantemos o main escondido até o vídeo estar 100% pronto */}
           <main style={{ 
             display: isLoading ? "none" : "block",
             opacity: isLoading ? 0 : 1 

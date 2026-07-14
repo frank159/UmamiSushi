@@ -25,12 +25,22 @@ export const ContentContainer = styled.div`
 
 export const TextContainer = styled(motion.div)`
   width: 100%;
+  will-change: transform, opacity;
 `;
 
 export const Title = styled.h1``;
 
 export const Text = styled.p`
   margin-top: 1rem;
+`;
+
+export const CardContent = styled.div`
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  color: #fff;
 `;
 
 export const ServiceContainer = styled(motion.div)`
@@ -40,6 +50,7 @@ export const ServiceContainer = styled(motion.div)`
   margin-top: 4rem;
   width: 100%;
   max-width: 1200px;
+  will-change: transform, opacity;
 
   .swiper-pagination-bullet {
     background: #ffffff21;
@@ -56,10 +67,9 @@ export const ServiceContainer = styled(motion.div)`
   }
 
   @media (max-width: 768px) {
-    display: block; // Swiper funciona melhor com block no mobile
+    display: block;
     width: 100%;
     padding: 0 10px;
-    // Isso centraliza o ServiceCard dentro do SwiperSlide
     .swiper-slide {
       display: flex;
       justify-content: center;
@@ -68,7 +78,7 @@ export const ServiceContainer = styled(motion.div)`
   }
 `;
 
-export const ServiceCard = styled.div<{ bg: string }>`
+export const ServiceCard = styled.div`
   position: relative;
   width: 100%;
   max-width: 380px;
@@ -81,16 +91,6 @@ export const ServiceCard = styled.div<{ bg: string }>`
   color: #fff;
   border: 1px solid #480001;
   margin: 0 auto;
-
-  &::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image: url(${(props) => props.bg});
-    background-size: cover;
-    background-position: center;
-    opacity: 0.6;
-  }
 
   &::after {
     content: "";
