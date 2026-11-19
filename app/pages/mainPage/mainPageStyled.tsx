@@ -15,12 +15,12 @@ export const VideoContainer = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.6; 
+  opacity: 0.6;
   z-index: -1;
   video {
     width: 100%;
     height: 100%;
-    object-fit: cover; 
+    object-fit: cover;
 
     transform: scaleX(-1);
     @media (max-width: 768px) {
@@ -97,8 +97,9 @@ export const ButtonContentDiv = styled(motion.div)`
   }
 `;
 
-export const ButtonContent = styled.button`
+export const ButtonContent = styled.a`
   margin-bottom: 1rem;
+  text-decoration: none;
   font-size: 16px;
   font-family:
     var(--font-mohave), sans-serif; /* Usando a variável que configuramos */

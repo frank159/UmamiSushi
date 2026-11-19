@@ -8,8 +8,8 @@ import { useRef, useState, useEffect } from "react";
 
 export default function MainPage() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.1 }); 
-  
+  const isInView = useInView(ref, { once: true, amount: 0.1 });
+
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -39,15 +39,15 @@ export default function MainPage() {
             type="video/mp4"
             media="(max-width: 768px)"
           />
-          <source 
-            src="https://n8mld2313ljofqtt.public.blob.vercel-storage.com/telaInicial720HD.mp4" 
-            type="video/mp4" 
+          <source
+            src="https://n8mld2313ljofqtt.public.blob.vercel-storage.com/telaInicial720HD.mp4"
+            type="video/mp4"
           />
           Seu navegador não suporta vídeos.
         </video>
         <S.Overlay />
       </S.VideoContainer>
-      
+
       <S.Content ref={ref}>
         <S.LogoContent
           initial={{ opacity: 0, x: motionX }}
@@ -56,7 +56,7 @@ export default function MainPage() {
         >
           <S.StyledLogo src={logotipo} alt="Logo" priority />
         </S.LogoContent>
-        
+
         <S.TitleContent
           initial={{ opacity: 0, x: motionX }}
           animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -66,7 +66,7 @@ export default function MainPage() {
           <br />
           O FRESCOR DO MAR, <br />A SUA MELHOR NOITE.
         </S.TitleContent>
-        
+
         <S.TextContent
           initial={{ opacity: 0, x: motionX }}
           animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -75,7 +75,7 @@ export default function MainPage() {
           Pratos assinados por nossos Itamaes e preparados sob medida para o seu
           paladar. Frescor absoluto em cada peça.
         </S.TextContent>
-        
+
         <S.ButtonContentDiv
           initial={{ opacity: 0, x: motionX }}
           animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -84,7 +84,11 @@ export default function MainPage() {
           <S.ButtonContent style={{ marginRight: "2rem" }}>
             Acessar Cardápio
           </S.ButtonContent>
-          <S.ButtonContent>Fazer reserva</S.ButtonContent>
+          <S.ButtonContent
+            href='https://wa.me/5541996262562?text=Olá!%20Gostaria%20de%20mais%20informações.'
+            target="_blank"
+            rel="noopener noreferrer"
+          >Fazer reserva</S.ButtonContent>
         </S.ButtonContentDiv>
       </S.Content>
     </S.MainContainer>

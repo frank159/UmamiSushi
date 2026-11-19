@@ -135,8 +135,9 @@ export const ButtonGroup = styled.div`
   width: 100%;
 `;
 
-export const ButtonContent = styled.button`
+export const ButtonContent = styled.a`
   margin-bottom: 1rem;
+  text-decoration: none;
   font-size: 16px;
   font-family:
     var(--font-mohave), sans-serif; /* Usando a variável que configuramos */

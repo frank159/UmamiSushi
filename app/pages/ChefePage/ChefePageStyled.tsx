@@ -12,7 +12,7 @@ export const MainContainer = styled.div`
   justify-content: center;
   align-items: center;
   background-color: #000;
-  
+
 `;
 
 export const ImgContainer = styled(motion.div)`
@@ -21,7 +21,7 @@ export const ImgContainer = styled(motion.div)`
   @media (max-width: 1240px) {
     width: 50%;
     height: 50vh;
-    overflow: hidden; 
+    overflow: hidden;
   }
 
   @media (max-width: 768px) {
@@ -86,9 +86,7 @@ export const Text = styled.p`
   width: 80%;
 
   @media (max-width: 1240px) {
-    border-left: 2px solid #fff;
-    padding-left: 1rem;
-    margin-left: 0.4rem;
+    margin-top: 0.4rem;
     width: 100%;
   }
 
