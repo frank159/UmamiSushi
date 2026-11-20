@@ -1,4 +1,3 @@
-// src/styles/GlobalStyles.ts
 'use client';
 import { createGlobalStyle } from 'styled-components';
 
@@ -11,7 +10,7 @@ export const GlobalStyles = createGlobalStyle`
 
 body {
     font-family: var(--font-mohave), sans-serif;
-    font-weight: 300; /* 👈 Mude de 400 para 300 */
+    font-weight: 300;
     font-size: 16px !important;
     background-color: #000000;
     color: #ffff;
@@ -24,7 +23,7 @@ h1 {
     font-family: var(--font-aboreto), serif !important;
     font-size: 48px !important;
     font-weight: 300;
-    
+
     @media (max-width: 768px) {
       font-size: 24px !important;
     }
@@ -54,12 +53,11 @@ h1 {
     line-height: 1.5;
   }
 
-  /* Classes auxiliares para textos específicos */
   .text-bold {
-    font-weight: 700; /* Mohave Bold */
+    font-weight: 700;
   }
 
   .text-extrabold {
-    font-weight: 300; /* Mohave ExtraBold */
+    font-weight: 300;
   }
 `;

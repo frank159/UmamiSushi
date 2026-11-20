@@ -29,7 +29,7 @@ export const ContentContainer = styled(motion.div)`
   }
 
   @media (max-width: 768px) {
-    width: 100%; /* Ocupa a largura total da tela no mobile */
+    width: 100%;
     min-height: auto;
   }
 `;
@@ -50,7 +50,7 @@ export const LeftPanel = styled.div`
 
   @media (max-width: 768px) {
     padding: 3rem 2rem;
-    padding-bottom: 2rem; /* Reduzido pois o vídeo virá abaixo */
+    padding-bottom: 2rem;
     align-items: flex-start;
     text-align: left;
     width: 100%;
@@ -100,7 +100,7 @@ export const BackgroundImageWrapper = styled.div`
 
 export const Title = styled.h1`
   font-family:
-    "Times New Roman", Times, serif; /* Substitua pela fonte Serif do seu projeto (ex: Playfair Display) */
+    "Times New Roman", Times, serif;
   font-size: 3.5rem;
   font-weight: 400;
   color: #ffffff;
@@ -140,7 +140,7 @@ export const ButtonContent = styled.a`
   text-decoration: none;
   font-size: 16px;
   font-family:
-    var(--font-mohave), sans-serif; /* Usando a variável que configuramos */
+    var(--font-mohave), sans-serif;
   background-color: #480001;
   color: white;
   border: none;

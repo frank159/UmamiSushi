@@ -49,14 +49,6 @@ export default function MainPage() {
       </S.VideoContainer>
 
       <S.Content ref={ref}>
-        <S.LogoContent
-          initial={{ opacity: 0, x: motionX }}
-          animate={isInView ? { opacity: 1, x: 0 } : {}}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-        >
-          <S.StyledLogo src={logotipo} alt="Logo" priority />
-        </S.LogoContent>
-
         <S.TitleContent
           initial={{ opacity: 0, x: motionX }}
           animate={isInView ? { opacity: 1, x: 0 } : {}}

@@ -40,16 +40,16 @@ export const Overlay = styled.div`
     0,
     0,
     0.4
-  ); // Escurece um pouco o vídeo para o texto aparecer
+  );
 `;
 
 export const StyledLogo = styled(Image)`
-  height: 3rem; // Tamanho padrão (Desktop)
+  height: 3rem;
   width: auto;
   object-fit: contain;
 
   @media (max-width: 768px) {
-    height: 1.6rem; // Tamanho reduzido para Mobile
+    height: 1.6rem;
   }
 `;
 
@@ -102,7 +102,7 @@ export const ButtonContent = styled.a`
   text-decoration: none;
   font-size: 16px;
   font-family:
-    var(--font-mohave), sans-serif; /* Usando a variável que configuramos */
+    var(--font-mohave), sans-serif;
   background-color: #480001;
   color: white;
   border: none;
