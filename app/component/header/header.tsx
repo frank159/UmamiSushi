@@ -104,7 +104,7 @@ const panelVariants: Variants = {
   exit: {
     clipPath: "inset(0 0 100% 0)",
     opacity: 0,
-    transition: { when: "afterChildren", duration: 0.45, ease: EASE_IN_OUT },
+    transition: { duration: 0.22, ease: EASE_IN_OUT },
   },
 };
 
@@ -117,7 +117,7 @@ const panelVariantsReduced: Variants = {
 const listVariants: Variants = {
   hidden: {},
   visible: { transition: { staggerChildren: 0.05, delayChildren: 0.12 } },
-  exit: { transition: { staggerChildren: 0.035, staggerDirection: -1 } },
+  exit: { transition: { staggerChildren: 0.02, staggerDirection: -1 } },
 };
 
 const itemVariants: Variants = {
@@ -126,7 +126,7 @@ const itemVariants: Variants = {
   exit: {
     opacity: 0,
     y: -14,
-    transition: { duration: 0.26, ease: [0.4, 0, 0.2, 1] },
+    transition: { duration: 0.16, ease: [0.4, 0, 0.2, 1] },
   },
 };
 
@@ -169,15 +169,13 @@ export default function Header() {
     <>
       <header
         style={{ paddingInline: "clamp(1.25rem, 4vw, 4rem)" }}
-        className={`fixed inset-x-0 top-0 z-50 flex h-14 w-full items-center justify-between transition-[height,background-color,backdrop-filter] duration-300 ${
-          scrolled ? "lg:h-20" : "lg:h-[104px]"
-        } ${scrolled || open ? "bg-black/60 backdrop-blur-md" : "bg-transparent"}`}
+        className={`fixed inset-x-0 top-0 z-50 flex h-14 w-full items-center justify-between transition-[height,background-color,backdrop-filter] duration-300 ${scrolled ? "lg:h-20" : "lg:h-[104px]"
+          } ${scrolled || open ? "bg-black/60 backdrop-blur-md" : "bg-transparent"}`}
       >
         <div
           aria-hidden="true"
-          className={`pointer-events-none absolute inset-0 -z-10 bg-gradient-to-b from-black/60 to-transparent transition-opacity duration-300 ${
-            scrolled || open ? "opacity-0" : "opacity-100"
-          }`}
+          className={`pointer-events-none absolute inset-0 -z-10 bg-gradient-to-b from-black/60 to-transparent transition-opacity duration-300 ${scrolled || open ? "opacity-0" : "opacity-100"
+            }`}
         />
 
         <a
@@ -256,14 +254,17 @@ export default function Header() {
             >
               <motion.ul
                 variants={listVariants}
-                style={{ paddingInline: "clamp(1.25rem, 4vw, 4rem)" }}
-                className="flex flex-col py-3"
+                style={{
+                  paddingInline: "clamp(1.25rem, 4vw, 4rem)",
+                  paddingBlock: "1rem",
+                }}
+                className="flex flex-col"
               >
                 {NAV.map((item, i) => (
                   <motion.li
                     key={item.id}
                     variants={reduceMotion ? undefined : itemVariants}
-                    className="border-b border-white/15 last:border-b-0"
+                    className=" border-b border-white/15 last:border-b-0"
                   >
                     <motion.div
                       whileTap={{ x: 6 }}
@@ -276,7 +277,8 @@ export default function Header() {
                           close();
                           setTimeout(() => scrollToSection(item.id), 120);
                         }}
-                        className="flex w-full items-baseline justify-end gap-3 py-4 text-lg uppercase tracking-[0.1em] text-white"
+                        style={{ paddingBlock: "1.5rem" }}
+                        className="flex w-full items-baseline justify-end gap-3 text-lg uppercase tracking-[0.1em] text-white"
                       >
                         {item.label}
                         <span className="w-6 text-[11px] text-white/50">

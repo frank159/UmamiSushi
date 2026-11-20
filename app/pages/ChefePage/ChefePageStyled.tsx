@@ -60,10 +60,9 @@ export const TextContent = styled(motion.div)`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   padding-left: 4rem;
-  padding-right: 4rem;
-  padding-bottom: 10rem;
+  padding-right: 4.5rem;
 
   background-image: url(${fundoChef.src});
   background-size: cover;
@@ -81,7 +80,9 @@ export const TextContent = styled(motion.div)`
   }
 `;
 
-export const Title = styled.h1``;
+export const Title = styled.h1`
+  width: 70%;
+`;
 export const Text = styled.p`
   width: 80%;
 
@@ -93,5 +94,47 @@ export const Text = styled.p`
   @media (max-width: 768px) {
     width: 100%;
     margin-left: 0.2rem;
+  }
+`;
+
+
+export const ButtonGroup = styled.div`
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+  width: 100%;
+
+  padding-top: 1rem;
+`;
+
+
+export const ButtonContent = styled.a`
+  margin-bottom: 1rem;
+  text-decoration: none;
+  font-size: 16px;
+  font-family:
+    var(--font-mohave), sans-serif;
+  background-color: #480001;
+  color: white;
+  border: none;
+  padding: 0.3rem 2rem;
+  cursor: pointer;
+
+  transition: all 0.1s ease-in-out;
+
+  @media (max-width: 768px) {
+    padding: 0.3rem 1.5rem;
+    font-size: 12px !important;
+  }
+
+  &:hover {
+    background-color: #680001;
+    transform: scale(1.05);
+    transition: all 0.1s;
+  }
+
+  &:active {
+    background-color: #280001;
+    transition: all 0.1s;
   }
 `;

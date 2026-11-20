@@ -2,6 +2,8 @@ import { motion } from "motion/react";
 import styled from "styled-components";
 import Image from "next/image";
 
+const MOBILE_HEADER_H = "56px";
+
 export const MainContainer = styled.div`
   position: relative;
   width: 100%;
@@ -17,14 +19,15 @@ export const VideoContainer = styled.div`
   height: 100%;
   opacity: 0.6;
   z-index: -1;
+
   video {
     width: 100%;
     height: 100%;
     object-fit: cover;
-
     transform: scaleX(-1);
+
     @media (max-width: 768px) {
-    transform: scaleX(1);
+      transform: scaleX(1);
     }
   }
 `;
@@ -35,12 +38,7 @@ export const Overlay = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(
-    0,
-    0,
-    0,
-    0.4
-  );
+  background: rgba(0, 0, 0, 0.4);
 `;
 
 export const StyledLogo = styled(Image)`
@@ -81,7 +79,10 @@ export const Content = styled.div`
   margin-left: 5vw;
 
   @media (max-width: 768px) {
-    margin-top: 0;
+    box-sizing: border-box;
+    height: 100svh;
+    margin-top: 7rem;
+    padding-top: calc(${MOBILE_HEADER_H} + 2rem);
     padding-right: 10%;
   }
 `;
@@ -91,9 +92,12 @@ export const ButtonContentDiv = styled(motion.div)`
   margin-bottom: 1rem;
   flex-direction: row;
   display: flex;
+  gap: 2rem;
 
   @media (max-width: 768px) {
     margin-top: 1rem;
+    gap: 0.75rem;
+    width: 100%;
   }
 `;
 
@@ -101,8 +105,7 @@ export const ButtonContent = styled.a`
   margin-bottom: 1rem;
   text-decoration: none;
   font-size: 16px;
-  font-family:
-    var(--font-mohave), sans-serif;
+  font-family: var(--font-mohave), sans-serif;
   background-color: #480001;
   color: white;
   border: none;
@@ -112,7 +115,9 @@ export const ButtonContent = styled.a`
   transition: all 0.1s ease-in-out;
 
   @media (max-width: 768px) {
-    padding: 0.3rem 1.5rem;
+    flex: 1;
+    text-align: center;
+    padding: 0.6rem 1rem;
     font-size: 12px !important;
   }
 

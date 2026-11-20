@@ -1,6 +1,5 @@
 "use client";
 
-import logotipo from "../../../public/images/logos/logotipoVersaoS.png";
 import fallbackImage from "../../../public/images/fallback-image.png";
 import * as S from "./mainPageStyled";
 import { useInView } from "motion/react";

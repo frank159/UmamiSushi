@@ -26,6 +26,16 @@ export default function ChefePage() {
             <S.Text style={{ width: "65%" }}>
               Liderado pelo Itamae, com passagem por casas estreladas, nosso balcão resgata a essência do estilo Edomae. Essa técnica centenária exige domínio absoluto sobre o tempo, a salga e a cura dos peixes para extrair o máximo de umami de cada ingrediente. Do contato direto com pescadores artesanais à criação de receitas autorais, cada etapa reflete rigor técnico e respeito à sazonalidade.
             </S.Text>
+
+            <S.ButtonGroup>
+              <S.ButtonContent>Acessar Cardápio</S.ButtonContent>
+              <S.ButtonContent
+                href='https://wa.me/5541996262562?text=Olá!%20Gostaria%20de%20mais%20informações.'
+                target="_blank"
+                rel="noopener noreferrer"
+              >Fazer reserva</S.ButtonContent>
+
+            </S.ButtonGroup>
           </motion.div>
         </S.TextContent>
         <S.ImgContainer
