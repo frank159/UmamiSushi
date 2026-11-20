@@ -10,7 +10,7 @@ export default function PresentationPage() {
 
   return (
     <S.MainContainer>
-      <S.ContentContainer ref={ref}>
+      <S.ContentContainer ref={ref} id="cozinha">
         <S.ImgContainer
           initial={{ opacity: 0, x: -100 }}
           animate={isInView ? { opacity: 1, x: 0 } : {}}

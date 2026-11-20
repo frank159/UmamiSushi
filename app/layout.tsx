@@ -4,8 +4,9 @@ import { useEffect, useState } from "react";
 import { Aboreto, Mohave } from "next/font/google";
 import { GlobalStyles } from "@/app/GlobalStyles";
 import StyledComponentsRegistry from "@/lib/registry";
-import * as S from "./layoutStyled"; 
+import * as S from "./layoutStyled";
 import { AnimatePresence } from "framer-motion";
+import "./globals.css";
 
 const aboreto = Aboreto({ weight: "400", subsets: ["latin"], variable: "--font-aboreto" });
 const mohave = Mohave({ weight: ["300", "400", "700"], subsets: ["latin"], variable: "--font-mohave" });
@@ -25,14 +26,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           setIsLoading(false);
         } else {
           video.addEventListener("canplaythrough", () => setIsLoading(false));
-          
+
           video.addEventListener("canplay", () => {
              setTimeout(() => setIsLoading(false), 1000);
           });
 
           video.addEventListener("error", () => setIsLoading(false));
         }
-        return true; 
+        return true;
       }
       return false;
     };
@@ -42,7 +43,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     });
 
     observer.observe(document.body, { childList: true, subtree: true });
-    
+
     const timeout = setTimeout(() => setIsLoading(false), 6000);
 
     return () => {
@@ -56,7 +57,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="min-h-full flex flex-col">
         <StyledComponentsRegistry>
           <GlobalStyles />
-          
+
           <AnimatePresence>
             {isLoading && (
               <S.LoadingOverlay
@@ -87,9 +88,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             )}
           </AnimatePresence>
 
-          <main style={{ 
+          <main style={{
             display: isLoading ? "none" : "block",
-            opacity: isLoading ? 0 : 1 
+            opacity: isLoading ? 0 : 1
           }}>
             {children}
           </main>

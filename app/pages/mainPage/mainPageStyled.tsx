@@ -15,12 +15,12 @@ export const VideoContainer = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.6; 
+  opacity: 0.6;
   z-index: -1;
   video {
     width: 100%;
     height: 100%;
-    object-fit: cover; 
+    object-fit: cover;
 
     transform: scaleX(-1);
     @media (max-width: 768px) {
@@ -40,16 +40,16 @@ export const Overlay = styled.div`
     0,
     0,
     0.4
-  ); // Escurece um pouco o vídeo para o texto aparecer
+  );
 `;
 
 export const StyledLogo = styled(Image)`
-  height: 3rem; // Tamanho padrão (Desktop)
+  height: 3rem;
   width: auto;
   object-fit: contain;
 
   @media (max-width: 768px) {
-    height: 1.6rem; // Tamanho reduzido para Mobile
+    height: 1.6rem;
   }
 `;
 
@@ -97,11 +97,12 @@ export const ButtonContentDiv = styled(motion.div)`
   }
 `;
 
-export const ButtonContent = styled.button`
+export const ButtonContent = styled.a`
   margin-bottom: 1rem;
+  text-decoration: none;
   font-size: 16px;
   font-family:
-    var(--font-mohave), sans-serif; /* Usando a variável que configuramos */
+    var(--font-mohave), sans-serif;
   background-color: #480001;
   color: white;
   border: none;

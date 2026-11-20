@@ -18,6 +18,15 @@
     --foreground: #ededed;
   }
 }
+*::selection {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+*::-moz-selection {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
 
 body {
   background: var(--background);
@@ -36,4 +45,10 @@ body {
 .swiper-pagination-bullet-active {
   background: #fff;
   transform: scale(1.3);
+}
+
+@layer base {
+  h1 {
+    line-height: 1.1;
+  }
 }

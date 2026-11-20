@@ -12,7 +12,7 @@ export default function DrinkPage() {
 
   return (
     <S.MainContainer>
-      <S.ContentContainer ref={ref}>
+      <S.ContentContainer ref={ref} id="coquetelaria">
         <S.TextContainer>
           <S.Title
             initial={{ opacity: 0, x: -100 }}
@@ -21,7 +21,7 @@ export default function DrinkPage() {
           >
             COQUETELARIA AUTORAL:
             <br />
-            EQUILÍBRIO DOS 
+            EQUILÍBRIO DOS
             <S.DescktopBr />
              SENTIDOS
           </S.Title>

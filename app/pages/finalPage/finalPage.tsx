@@ -2,23 +2,12 @@
 import Image from "next/image";
 import * as S from "./finalPageStyled";
 import { useInView } from "motion/react";
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 
 import finalPage from "../../../public/images/finalPage.png";
 import finalPage2 from "../../../public/images/finalPage2.png";
 
 export default function FinalPage() {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.2 });
 
@@ -26,6 +15,7 @@ export default function FinalPage() {
     <S.MainContainer>
       <S.ContentContainer
         ref={ref}
+        id="contato"
         initial={{ opacity: 0, y: 40 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.8, ease: "easeOut" }}
@@ -50,7 +40,12 @@ export default function FinalPage() {
 
           <S.ButtonGroup>
             <S.ButtonContent>Acessar Cardápio</S.ButtonContent>
-            <S.ButtonContent>Fazer reserva</S.ButtonContent>
+            <S.ButtonContent
+              href='https://wa.me/5541996262562?text=Olá!%20Gostaria%20de%20mais%20informações.'
+              target="_blank"
+              rel="noopener noreferrer"
+            >Fazer reserva</S.ButtonContent>
+
           </S.ButtonGroup>
 
           <S.AddressInfo>
